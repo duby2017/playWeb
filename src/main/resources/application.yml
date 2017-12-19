@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: dby
+server:
+  port: 8081
