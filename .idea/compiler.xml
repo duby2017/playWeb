@@ -22,14 +22,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="common" />
         <module name="eureka" />
+        <module name="requestManager" />
+        <module name="testManager" />
         <module name="zpkin" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dby" target="1.5" />
+      <module name="common" target="1.8" />
+      <module name="dby" target="1.6" />
       <module name="eureka" target="1.8" />
+      <module name="requestManager" target="1.8" />
+      <module name="testManager" target="1.8" />
       <module name="zpkin" target="1.8" />
       <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>
