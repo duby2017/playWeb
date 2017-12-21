@@ -10,11 +10,12 @@
     <packaging>pom</packaging>
     <properties>
 
-
     </properties>
 
     <modules>
         <module>eureka</module>
+        <module>zuul</module>
+        <module>zpkin</module>
     </modules>
      <dependencyManagement>
 
