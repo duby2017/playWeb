@@ -6,7 +6,7 @@
     <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/requestManager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testManager" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/zpkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
   </component>
 </project>

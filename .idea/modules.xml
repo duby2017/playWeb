@@ -7,7 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/requestManager/requestManager.iml" filepath="$PROJECT_DIR$/requestManager/requestManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/testManager/testManager.iml" filepath="$PROJECT_DIR$/testManager/testManager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zpkin/zpkin.iml" filepath="$PROJECT_DIR$/zpkin/zpkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin/zpkin.iml" filepath="$PROJECT_DIR$/zipkin/zpkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>

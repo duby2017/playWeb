@@ -5,7 +5,7 @@ package com.dby.common;
  */
 
 public class Hello {
-    public static String sayHello() {
-        return "hello, world!";
+    public static String sayHello(String serviceName) {
+        return "hello, "+serviceName;
     }
 }

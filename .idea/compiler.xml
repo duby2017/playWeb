@@ -36,6 +36,7 @@
       <module name="eureka" target="1.8" />
       <module name="requestManager" target="1.8" />
       <module name="testManager" target="1.8" />
+      <module name="zipkin" target="1.8" />
       <module name="zpkin" target="1.8" />
       <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>

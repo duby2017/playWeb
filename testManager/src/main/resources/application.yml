@@ -4,6 +4,7 @@ eureka:
       defaultZone: http://localhost:8762/eureka/
 server:
   port: 8501
+  context-path: /test
 spring:
   application:
     name: service-test

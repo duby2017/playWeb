@@ -10,8 +10,10 @@ spring:
 zuul:
   routes:
     api-a:
-      path: /api-a/**
-      serviceId: service-ribbon
+      path: /test/**
+      serviceId: service-test
+      stripPrefix: false
     api-b:
-      path: /api-b/**
-      serviceId: service-feign
+      path: /request/**
+      serviceId: service-request
+      stripPrefix: false
