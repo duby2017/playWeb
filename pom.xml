@@ -31,14 +31,11 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
-
-
         </dependencies>
     </dependencyManagement>
 
