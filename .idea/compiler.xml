@@ -26,6 +26,7 @@
         <module name="eureka" />
         <module name="requestManager" />
         <module name="testManager" />
+        <module name="zipkin" />
         <module name="zpkin" />
         <module name="zuul" />
       </profile>
