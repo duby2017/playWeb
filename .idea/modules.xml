@@ -3,10 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dby.iml" filepath="$PROJECT_DIR$/dby.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/playWeb.iml" filepath="$PROJECT_DIR$/playWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/requestManager/requestManager.iml" filepath="$PROJECT_DIR$/requestManager/requestManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/testManager/testManager.iml" filepath="$PROJECT_DIR$/testManager/testManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin/zipkin.iml" filepath="$PROJECT_DIR$/zipkin/zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/zipkin/zpkin.iml" filepath="$PROJECT_DIR$/zipkin/zpkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>

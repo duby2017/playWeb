@@ -35,6 +35,7 @@
       <module name="common" target="1.8" />
       <module name="dby" target="1.6" />
       <module name="eureka" target="1.8" />
+      <module name="playWeb" target="1.6" />
       <module name="requestManager" target="1.8" />
       <module name="testManager" target="1.8" />
       <module name="zipkin" target="1.8" />
