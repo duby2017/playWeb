@@ -19,4 +19,9 @@ public class HelloController {
     public String sayHello() {
         return helloService.sayRequstHello("test");
     }
+
+    @GetMapping("/1")
+    public String sayHello1() {
+        return "hello1";
+    }
 }
