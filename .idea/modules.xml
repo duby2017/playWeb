@@ -7,8 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/playWeb.iml" filepath="$PROJECT_DIR$/playWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/requestManager/requestManager.iml" filepath="$PROJECT_DIR$/requestManager/requestManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/testManager/testManager.iml" filepath="$PROJECT_DIR$/testManager/testManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testManager/testManager.iml" filepath="$PROJECT_DIR$/testManager/testManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/zipkin/zipkin.iml" filepath="$PROJECT_DIR$/zipkin/zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/zipkin/zpkin.iml" filepath="$PROJECT_DIR$/zipkin/zpkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>
