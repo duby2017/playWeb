@@ -13,3 +13,23 @@ spring:
   sleuth:
     sampler:
     percentage: 1.0
+
+  #thymeleaf start
+  thymeleaf:
+    mode: HTML5
+    encoding: utf-8
+    content-type: text/html
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+  #thymeleaf end
+
+  datasource:
+      url: jdbc:mysql://localhost:3306/dby?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: dby1234
+      driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.dby.request.entity
+  mapperLocations: classpath:mapper/*.xml

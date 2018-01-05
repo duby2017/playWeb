@@ -1,4 +1,4 @@
-package com.dby.test.entity;
+package com.dby.request.entity;
 
 
 /**
