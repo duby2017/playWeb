@@ -5,9 +5,13 @@ package com.dby.request.entity;
  * Created by Administrator on 2017/12/28.
  */
 
-public class User {
+public class User  {
 
     private String id;
+
+    private String name;
+
+    private Integer age;
 
     public String getName() {
         return name;
@@ -33,7 +37,14 @@ public class User {
         this.id = id;
     }
 
-    private String name;
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 
-    private Integer age;
+
 }

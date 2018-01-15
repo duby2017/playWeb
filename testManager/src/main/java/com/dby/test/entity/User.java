@@ -5,7 +5,7 @@ package com.dby.test.entity;
  * Created by Administrator on 2017/12/28.
  */
 
-public class User {
+public class User implements Comparable<User> {
 
     private String id;
 
@@ -36,4 +36,9 @@ public class User {
     private String name;
 
     private Integer age;
+
+    @Override
+    public int compareTo(User o) {
+        return this.getAge() >= o.getAge() ? 1 : -1;
+    }
 }
