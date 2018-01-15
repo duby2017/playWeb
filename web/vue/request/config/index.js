@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, 'E:/playWeb/playWeb/requestManager/src/main/resources/static/index.html'),
-    assetsRoot: path.resolve(__dirname, 'E:/playWeb/playWeb/requestManager/src/main/resources/static'),
+    index: path.resolve(__dirname, 'E:/playWeb/playWeb/server/requestManager/src/main/resources/static/index.html'),
+    assetsRoot: path.resolve(__dirname, 'E:/playWeb/playWeb/server/requestManager/src/main/resources/static'),
     assetsSubDirectory: 'request/static',
     assetsPublicPath: '/',
     productionSourceMap: true,
