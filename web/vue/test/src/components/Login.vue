@@ -43,14 +43,14 @@
       handleLogin() {
         let that = this;
         this.$refs.AccountFrom.validate((valid) => {
-          debugger
           if (valid) {
             this.loading = true;
             let loginParams = {username: this.account.username, pwd: this.account.pwd};
             API.login(loginParams).then(function (result) {
               that.loading = false;
               if (result && result.id) {
-                localStorage.setItem('access-user', JSON.stringify(result));
+                debugger
+                sessionStorage.setItem('access-user', JSON.stringify(result));
 //                that.$store.commit('SET_ROUTERS', user.permissions)
 //                that.$router.addRoutes(that.$store.getters.addRouters);
 //                that.$router.options.routes = that.$store.getters.routers;

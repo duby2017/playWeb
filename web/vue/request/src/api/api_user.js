@@ -7,7 +7,6 @@ import * as API from './'
 export default {
   //登录
   login: params => {
-    debugger
     return API.POST('/api/v1/users/login', params)
   },
   //登出
@@ -21,6 +20,6 @@ export default {
 
   //查询获取user列表(通过page分页)
   findList: params => {
-    return API.GET('/api/v1/users', params)
+    return API.GET('/list/users', params)
   },
 }

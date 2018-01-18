@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //跨域问题处理
 // app.use(cors());
 app.all('*', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', "http://localhost:8769");
+  res.header('Access-Control-Allow-Origin', "http://localhost:8081");
   res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, PATCH,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   res.header('Access-Control-Allow-Credentials','true'); //告诉客户端可以在HTTP请求中带上Cookie

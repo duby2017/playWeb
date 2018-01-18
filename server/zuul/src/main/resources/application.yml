@@ -13,7 +13,9 @@ zuul:
       path: /test/**
       serviceId: service-test
       stripPrefix: false
+      sensitiveHeaders:
     api-b:
       path: /request/**
       serviceId: service-request
       stripPrefix: false
+      sensitiveHeaders:

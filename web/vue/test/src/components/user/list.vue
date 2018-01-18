@@ -41,66 +41,79 @@
 </template>
 
 <script>
-  import API from '../../api/api_user';
+import API from "../../api/api_user";
 
-  export default {
-    data() {
-      return {
-        filters: {
-          name: ''
-        },
-        loading: false,
-        users: [],
-        total: 0,
-        page: 1,
-        limit: 10,
-        loading: false
-      }
+export default {
+  data() {
+    return {
+      filters: {
+        name: ""
+      },
+      loading: false,
+      users: [],
+      total: 0,
+      page: 1,
+      limit: 10,
+      loading: false
+    };
+  },
+  methods: {
+    //性别显示转换
+    formatSex: function(row, column) {
+      return row.sex == 1 ? "男" : row.sex == 0 ? "女" : "未知";
     },
-    methods: {
-      //性别显示转换
-      formatSex: function (row, column) {
-        return row.sex == 1 ? '男' : row.sex == 0 ? '女' : '未知';
-      },
-      handleCurrentChange(val) {
-        this.page = val;
-        this.search();
-      },
-      handleSearch(){
-        this.total = 0;
-        this.page = 1;
-        this.search();
-      },
-      //获取用户列表
-      search: function () {
-        let that = this;
-        let params = {
-          page: that.page,
-          limit: 10,
-          name: that.filters.name
-        };
+    handleCurrentChange(val) {
+      this.page = val;
+      this.search();
+    },
+    handleSearch() {
+      this.total = 0;
+      this.page = 1;
+      this.search();
+    },
+    //获取用户列表
+    search: function() {
+      let that = this;
+      let params = {
+        page: that.page,
+        limit: 10,
+        name: that.filters.name
+      };
 
-        that.loading = true;
-        API.findList(params).then(function (result) {
-          that.loading = false;
-          if (result && result.users) {
-            that.total = result.total;
-            that.users = result.users;
+      that.loading = true;
+      API.findList(params)
+        .then(
+          function(result) {
+            that.loading = false;
+            if (result && result.users) {
+              that.total = result.total;
+              that.users = result.users;
+            }
+          },
+          function(err) {
+            that.loading = false;
+            that.$message.error({
+              showClose: true,
+              message: err.toString(),
+              duration: 2000
+            });
           }
-        }, function (err) {
-          that.loading = false;
-          that.$message.error({showClose: true, message: err.toString(), duration: 2000});
-        }).catch(function (error) {
+        )
+        .catch(function(error) {
           that.loading = false;
           console.log(error);
-          that.$message.error({showClose: true, message: '请求出现异常', duration: 2000});
+          that.$message.error({
+            showClose: true,
+            message: "请求出现异常",
+            duration: 2000
+          });
         });
-      }
-    },
-    mounted() {
-      this.handleSearch()
     }
+  },
+  mounted() {
+    this.handleSearch();
   }
+};
 </script>
 
 <style scoped>

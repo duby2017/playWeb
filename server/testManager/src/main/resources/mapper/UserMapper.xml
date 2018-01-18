@@ -2,6 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dby.test.mapper.UserMapper">
 
+    <resultMap type="com.dby.test.entity.User" id="userList">
+        <result column="id" property="id"/>
+        <result column="userName" property="userName"/>
+        <result column="nickName" property="nickName"/>
+        <result column="email" property="email"/>
+        <result column="passWord" property="passWord"/>
+        <result column="name" property="name"/>
+    </resultMap>
+
     <insert id="add" parameterType="com.dby.test.entity.User">
         insert into user (id,name,age) values (#{id},#{name},#{age})
     </insert>
@@ -12,11 +21,39 @@
         <if test="age != null ">age = #{age}</if>
     </update>
 
+    <update id="updateUserInfo">
+        update user set nickname = #{nickname},email = #{email},name = #{name}
+        where username = #{username}
+    </update>
+
+    <update id="updateUserPwd">
+        update user set password = #{pwd} where username = #{username}
+    </update>
+
+
     <delete id="delete" parameterType="string">
         delete from user where id=#{id}
     </delete>
 
     <select id="get" parameterType="string" resultType="com.dby.test.entity.User">
         select id,name,age from user where id=#{id}
+    </select>
+
+    <select id="getUserByName" parameterType="string" resultType="com.dby.test.entity.User">
+        select * from user where username=#{userName}
+    </select>
+    <select id="listUsers" resultMap="userList">
+        select * from user
+        <where>
+            <if test="filerName != '' ">name = #{filerName}</if>
+        </where>
+        limit #{statNum},#{endNum}
+    </select>
+
+    <select id="countUsers" parameterType="string" resultType="int">
+        select count(*) from user
+        <where>
+            <if test="filerName != '' ">name = #{filerName}</if>
+        </where>
     </select>
 </mapper>

@@ -83,7 +83,7 @@
 
       bus.$on('goto', (url) => {
         if (url === "/login") {
-          localStorage.removeItem('access-user');
+          sessionStorage.removeItem('access-user');
         }
         this.$router.push(url);
       })
@@ -117,7 +117,7 @@
           that.loading = true;
           API.logout().then(function (result) {
             that.loading = false;
-            localStorage.removeItem('access-user');
+            sessionStorage.removeItem('access-user');
             that.$router.go('/login'); //用go刷新
           }, function (err) {
             that.loading = false;
@@ -131,7 +131,7 @@
       }
     },
     mounted() {
-      let user = localStorage.getItem('access-user');
+      let user = sessionStorage.getItem('access-user');
       if (user) {
         user = JSON.parse(user);
         this.nickname = user.nickname || '';

@@ -27,20 +27,54 @@
   </el-row>
 </template>
 <script>
-  export default{
-    data(){
-      return {
-        form: {
-          oldPwd: '',
-          newPwd: '',
-          confirmPwd: ''
-        }
+import API from "../../api/api_user";
+export default {
+  data() {
+    return {
+      form: {
+        oldPwd: "",
+        newPwd: "",
+        confirmPwd: ""
       }
-    },
-    methods: {
-      handleChangepwd() {
-        this.$message({message: "此功能只是让你看看，不会开发！", duration: 2000});
-      }
+    };
+  },
+  methods: {
+    handleChangepwd() {
+      let that = this;
+      API.changePwd(that.form)
+        .then(
+          function(result) {
+            if (result && parseInt(result.errcode) === 0) {
+              that.$message.success({
+                showClose: true,
+                message: "修改成功",
+                duration: 2000
+              });
+            } else {
+              that.$message.error({
+                showClose: true,
+                message: result.errmsg,
+                duration: 2000
+              });
+            }
+          },
+          function(err) {
+            that.$message.error({
+              showClose: true,
+              message: err.toString(),
+              duration: 2000
+            });
+          }
+        )
+        .catch(function(error) {
+          console.log(error);
+          that.$message.error({
+            showClose: true,
+            message: "请求出现异常",
+            duration: 2000
+          });
+        });
     }
   }
+};
 </script>
